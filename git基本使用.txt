@@ -1,0 +1,35 @@
+git init 初始化 创建.git文件
+git log 查看历史版本
+git reflog 查看所有版本记录
+git reset --hard 版本号   (版本回退)
+cat 文件名   查看文件内容
+git status 查看仓库状态
+git add 文件  添加至暂存区
+git add .        将所有添加至暂存区
+git commit -m"注释"  提交修改
+git remote add origin  添加远程仓库
+git push -u origin master 将本地库的内容推送到远程   -u参数将远程库和本地master分支关联
+git branch dev 创建分支dev
+git checkout dev或git switch dev     切换分支
+git branch 查看当前分支
+git checkout master  git merge dev    将dev分支合并到master分支
+git branch -d dev   删除分支
+
+推送分支  git push origin <branch-name>   推送自己的修改
+关联之后直接使用git push
+抓取分支 git checkout -b dev origin/dev
+
+推送失败 因为远程分支比你的本地更新 需要先用git pull试图合并
+如果合并有冲突 则解决冲突 并在本地提交
+
+
+如果git pull提示 no tracking information 说明本地分支和远程分支的链接关系没有创建 
+用命令  git branch --set-upstream-to <branch-name> origin/<branch-name>
+
+
+//基本操作
+一般就是用 git clone
+git pull
+git add .
+git commit -m" "
+git push等等
